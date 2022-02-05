@@ -1,0 +1,17 @@
+---
+
+- name: Get local timestamp
+  ansible.builtin.shell: "date +\"%Y-%m-%d %H:%M:%S\""
+  register: local_timestamp
+
+- name: Print return information from the previous task
+  ansible.builtin.debug:
+    var: local_timestamp
+
+- name: Get uptime information
+  ansible.builtin.shell: /usr/bin/uptime
+  register: result
+
+- name: Print return information from the previous task
+  ansible.builtin.debug:
+    var: result

@@ -1,0 +1,5 @@
+---
+# tasks file for webapp
+
+- import_tasks: restart.yml
+  tags: webapp_restart_task

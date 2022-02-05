@@ -1,0 +1,5 @@
+---
+
+- hosts: "awx_server"
+  roles:
+     - { role: webapp,             tags: ["webapp_role"] }
